@@ -1,0 +1,29 @@
+<!-- Блок контента -->
+    <div id="call_us" class="centered">
+        <h2>Отправьте нам на почту сообщение, и менеджер смены перезвонит Вам в ближайшее время</h2>
+        <h3>Заполните все поля для отправки заявки</h3>
+        <form id="form" name="form">
+            <div id="input-inner" class="flex-container">
+                <input type="text" name="name" placeholder="Имя" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="phone" placeholder="Контактный телефон" required/>
+            </div>
+            <button class="send-button"><span>Оставить заявку</span></button>
+        </form>
+
+        <br/>
+    </div>
+
+    <div class="overlay js-overlay-thank-you">
+        <div class="popup js-thank-you">
+            <h2>Спасибо за заявку</h2>
+            <div class="close-popup js-close-thank-you"></div>
+        </div>
+    </div>
+
+<script src="js/applformHandler.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+
+
+
+

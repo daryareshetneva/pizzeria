@@ -1,0 +1,88 @@
+/* Импортируем шрифты с Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lobster|Philosopher|Roboto+Slab');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Значение длин и высот включают в себя padding */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: moccasin;
+    font-family: "Roboto Slab";
+    /* Насыщенность шрифта*/
+    font-weight: 300;
+    /* Размер шрифта */
+    font-size: 16px;
+    /* Цвет шрифта */
+    color: black;
+
+    /* Гладкий шрифт на мобильных устройствах*/
+    /* Среднее сглаживание */
+    -webkit-font-smoothing: antialiased;
+    /* Прокручивание сайта при помощи тача */
+    -webkit-overflow-srolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Philosopher";
+    /* Насыщенность шрифта*/
+    font-weight: 300;
+    /* Цвет шрифта */
+    color: black;
+}
+
+h1 {
+    padding-top: 5px;
+}
+
+.centered {
+    /* Выравнивание текста по центру */
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.container .cols {
+    float: left;
+    margin: 0 0 2%;
+    padding: 0 2%;
+    background: crimson;
+}
+
+.container .cols.col-1  { width: 8.3333333% }
+.container .cols.col-2  { width: 16.666666% }
+.container .cols.col-3  { width: 25% }
+.container .cols.col-4  { width: 33.333333% }
+.container .cols.col-5  { width: 41.666666% }
+.container .cols.col-6  { width: 50% }
+.container .cols.col-7  { width: 58.333333% }
+.container .cols.col-8  { width: 66.666666% }
+.container .cols.col-9  { width: 75% }
+.container .cols.col-10 { width: 83.333333% }
+.container .cols.col-11 { width: 91.666666% }
+.container .cols.col-12 { width: 100% }
+
+/* Clearfix для корректного отображения плавающих элементов */
+.container:after, .container:before, .row:after, .row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    height: 120px;
+    background: darkcyan;
+}
+
+.on_menu_img
+{
+    height: 260px;
+}

@@ -1,0 +1,712 @@
+/* Импортируем шрифты с Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lobster|Philosopher|Roboto+Slab');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    /* Значение длин и высот включают в себя padding */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF172;
+    font-family: 'Roboto Slab', 'Arial';
+    /* Насыщенность шрифта*/
+    font-weight: 300;
+    /* Размер шрифта */
+    font-size: 16px;
+    /* Цвет шрифта */
+    color: black;
+
+    /* Минимальный размер окна */
+    min-width: 480px;
+
+    /* Гладкий шрифт на мобильных устройствах*/
+    /* Среднее сглаживание */
+    -webkit-font-smoothing: antialiased;
+    /* Прокручивание сайта при помощи тача */
+    -webkit-overflow-srolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', 'Arial';
+    /* Насыщенность шрифта*/
+    font-weight: 300;
+    /* Цвет шрифта */
+    color: black;
+}
+
+h1 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.centered {
+    /* Выравнивание текста по центру */
+    text-align: center;
+}
+
+hr {
+    height: 5px;
+    background: #1f7e00;
+    border: 0;
+}
+
+.light {
+    height: 3px;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.brand-name {
+    color: lightyellow;
+    font-family: "Lobster";
+    font-weight: bolder;
+    font-size: 34px;
+    height: 48px;
+    letter-spacing: 1px;
+
+}
+
+/* End of General Styles */
+
+/* Navigation Styles */
+
+#header {
+    height: auto;
+    background: #ED8800;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 5px solid #1f7e00;
+}
+
+#brand {
+    flex-grow: 1;
+    background: #ED8800;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    flex-grow: 1;
+    background: #ED8800;
+
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    display: flex;
+    flex-grow: 6;
+    flex-direction: row;
+    background: #ED8800;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-navbar {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-navbar li {
+    text-align: center;
+}
+
+#main-navbar li a {
+    display: block;
+    color: lightyellow;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#main-navbar li:hover, #main-navbar > li > a.active {
+    background: #DE5B1F;
+    box-shadow: 0 0 3px #DE5B1F;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+#dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    background: #FFF172;
+}
+
+#dropdown li {
+    display: none;
+}
+
+#dropdown li a {
+    display: block;
+    color: #DE5B1F;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#dropdown li:hover {
+    background: #FF9D1A;
+    color: lightyellow;
+}
+
+#main-navbar li:hover #dropdown li {
+    display: block;
+    width: 400px;
+    box-shadow: 0 0 3px #ED8800;
+}
+
+.dropdown-header {
+    background: #FFB149;
+    font-size: 18px;
+    color: lightyellow;
+}
+
+#burg-toggle {
+    display: none;
+}
+/* End of Navigation Styles */
+
+/* Slider Styles */
+
+#slider {
+    border-bottom: 5px solid #1f7e00;
+    z-index: -1;
+    background: #1f7e00;
+}
+
+/* Настраиваем плагин slick slider под себя*/
+.slick-prev {
+    left: 10px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-dots {
+    bottom: 0px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+/* Адаптивность картинок */
+#slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* End of Slider Styles */
+
+/* Footer Styles */
+
+#footer {
+    background: #ED8800;
+    height: auto;
+    min-height: 150px;
+}
+
+#footer h4 {
+    color: lightyellow;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#links {
+    display: flex;
+    height: 90px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#links a i {
+    color: lightyellow;
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+#links a i:hover {
+    color: #DE5B1F;
+}
+
+/* End of Footer Styles */
+
+/* Styles of contact page */
+
+#location h2 {
+    font-weight: bold;
+}
+
+#map {
+    height: 500px;
+    border-top: 5px solid darkgreen;
+    border-bottom: 5px solid darkgreen;
+    z-index: -1;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info {
+    margin: 0 10px;
+}
+
+.info a {
+    color: #DE5B1F;
+    display: inline;
+    font-size: 38px;
+}
+
+.info h3 {
+    font-size: 24px;
+    padding: 5px 0px 5px 0px;
+}
+
+.order_button
+{
+    color: lightyellow;
+    background-color: darkgreen;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 10px 0 20px;
+    display: inline-block;
+    font-size: 22px;
+}
+
+.order_button:after
+{
+    transition: all .25s;
+    opacity: 0;
+    margin-left: -.5em;
+    content: '\f0a9';
+    font-family: 'Font Awesome 5 Free';
+    display: inline-block;
+    font-weight: 900;
+}
+
+.order_button:hover
+{
+    color: lightyellow;
+}
+
+.order_button:hover:after
+{
+    opacity: 1;
+    margin-left: .4em;
+}
+
+/* End of Styles of contact page */
+
+/* Styles of Application Form */
+
+#call_us {
+    width: 80%;
+    margin: 35px auto;
+    border-radius: 15px;
+    background: #DE5B1F;
+    box-shadow: 0 0 5px #ED8800;
+}
+
+#call_us h2, #call_us h3 {
+    margin: 0px 15%;
+    padding: 10px 0px;
+}
+
+#call_us h2 {
+    font-size: 28px;
+    color: lightyellow;
+}
+
+#call_us h3 {
+    font-size: 20px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+#input-inner {
+    flex-direction: column;
+}
+
+input {
+    font-family: "Roboto Slab";
+    /* Насыщенность шрифта*/
+    font-weight: 300;
+    border: 0;
+}
+
+#input-inner input {
+    font-family: 'Arial';
+    width: 50%;
+    margin: 5px auto 0px auto;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    border-radius: 3px;
+    /* чтобы убрать голубой цвет вокруг */
+    outline: none;
+}
+
+.send-button {
+    color: lightyellow;
+    background-color: darkgreen;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 30px 0;
+    font-size: 22px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 0;
+    cursor: pointer;
+}
+
+.send-button span {
+    font-family: 'Philosopher';
+    font-size: 24px;
+}
+
+/* End of Styles of Application Form */
+
+/* Menu cards Styles */
+.menu-container {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.menu-container .cols {
+    float: left;
+    padding: 0 15px;
+    min-width: 300px;
+}
+
+.menu-container .cols.col-1 {
+     width: 25%
+ }
+
+/* Clearfix для корректного отображения плавающих элементов */
+.menu-container:after, .menu-container:before, .row:after, .row:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cols.col-1 > h2 {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+/* End of Menu Styles */
+
+/* Adaptive design*/
+
+@media screen and (max-width: 1280px){
+    .menu-container .cols.col-1 {
+        width: 33%
+    }
+
+    #header {
+         flex-wrap: wrap;
+     }
+
+    #logo {
+        display: none;
+    }
+
+    #brand {
+        width: 100%;
+    }
+
+    #main-navbar {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 980px){
+
+    .menu-container .cols.col-1 {
+        width: 50%
+    }
+
+    #header {
+        flex-wrap: wrap;
+    }
+
+    #slider, #logo {
+        display: none;
+    }
+
+    #brand {
+        width: 100%;
+    }
+
+    #main-navbar {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 760px){
+
+    .menu-container .cols.col-1 {
+        width: 100%
+    }
+
+    #logo, #slider, #brand {
+        display: none;
+    }
+
+    #header {
+        flex-wrap: wrap;
+    }
+
+    #burg-toggle {
+         display: flex;
+         justify-content: flex-end;
+         width: 100%;
+     }
+
+    .trigger {
+        display: block;
+        height: 42px;
+        width: 48px;
+        margin-bottom: 5px;
+        border: 1px solid lightyellow;
+        border-radius: 2px;
+    }
+
+    #burg-toggle span {
+        display: flex;
+        margin: 8px;
+        width: 30px;
+        height: 2px;
+        background: lightyellow;
+    }
+
+    #navbar {
+        order: 1;
+    }
+
+    #main-navbar {
+        flex-direction: column;
+    }
+
+    #main-navbar li {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        position: static;
+    }
+
+    #dropdown {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        position: static;
+        background: #FFB149;
+    }
+
+    #dropdown li {
+        display: block;
+        box-shadow: none;
+    }
+
+    #dropdown li a {
+        display: block;
+        color: lightyellow;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+  /*  #dropdown a:hover, #dropdown > li > a.active {
+        background: #ED8800;
+    }*/
+
+    #main-navbar li:hover #dropdown li {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #gallery_page img {
+        width: 100%;
+        height: auto;
+    }
+
+    #gallery-mini {
+        display: none;
+    }
+}
+
+/* Gallery Styles */
+
+#gallery_page {
+    margin: 0px 50px 20px 50px;
+}
+
+.gallery-large-img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.gallery-large-img:active, .gallery-large-img:focus {
+    /* чтобы убрать голубой цвет вокруг */
+    outline: none;
+}
+
+#gallery-large span {
+    display: flex;
+    justify-content: center;
+}
+
+#gallery-large p {
+    background: #DE5B1F;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0px 15px;
+    color: lightyellow;
+}
+.gallery-mini-img {
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+/*Класс, отвечающий за вращение картиночек*/
+.tilt
+{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.tilt:hover
+{
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+
+/* End of Menu cards Styles*/
+
+/* Styles for Thank you Pop up */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: #FFF;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.close-popup:before {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    left: -4px;
+    transform: rotate(-45deg);
+}
+
+.close-popup:after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    transform: rotate(45deg);
+    left: -4px;
+}
+
+/* Price block Styles */
+.price-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 55px;
+}
+
+.price-container > .price-header {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+    background: #FF9D1A;
+    margin: 3px 5px 0px;
+    padding-top: 5px;
+    box-shadow: 0 0 2px #ED8800;
+}
+
+.price-container > .price-header > span {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-family: 'Philosopher';
+}
+
+/* End of Price block Styles */

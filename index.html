@@ -1,0 +1,81 @@
+<!-- Это означает, что мы используем HTML5 --> <!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Указываем кодировку текста -->
+    <meta charset="UTF-8">
+    <!-- Адаптация для мобильных устройств
+	Используя параметр width=device-width мы говорим веб-браузеру, что в качестве начальной ширины области viewport надо считать
+	непосредственную ширину экрана устройства.
+	Свойство initial-scale контролирует уровень масштабирования при первой загрузке страницы. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключаем файлы -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Моя пиццерия</title>
+</head>
+<body>
+    <!-- Шапка сайта с меню -->
+
+    <div id="header">
+        <div id="logo">
+            <img src="images/pizza_on_brand.png" />
+        </div>
+        <div id="brand">
+            <a class="brand-name">Моя пиццерия</a>
+        </div>
+        <div id="navbar">
+            <ul id="main-navbar">
+                <li class="dropdown-toggle"><a class="active" id="home" href="#">Наше меню  <i class="fas fa-caret-down"></i></a>
+                    <ul id="dropdown">
+                        <li class="dropdown-header">Горячие блюда</li>
+                        <li><a href="#pizza">Пицца</a></li>
+                        <li><a href="#mexica">Мексиканские закуски</a></li>
+                        <li class="dropdown-header">Холодные блюда</li>
+                        <li><a href="#salads">Салаты</a></li>
+                        <li><a href="#desserts">Десерты</a></li>
+                        <li class="dropdown-header">Напитки</li>
+                        <li><a href="#coffee">Классическое меню</a></li>
+                        <li><a href="#summer">Летнее предложение</a></li>
+                    </ul>
+                </li>
+                <li><a id="gallery" href="#">Галерея  <i class="fas fa-camera"></i></a></li>
+                <li><a id="applform" href="#">Заказать звонок  <i class="fas fa-phone"></i></a></li>
+                <li><a id="contacts" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div id="burg-toggle">
+            <a class="trigger" href="#">
+                <span class="bar" id="top"></span>
+                <span class="bar" id="middle"></span>
+                <span class="bar" id="bottom"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Блок контента -->
+
+    <div id="loaded_content"></div>
+
+    <!-- Подвал сайта-->
+
+    <div id="footer">
+        <div id="links">
+            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-vk" aria-hidden="true"></i></a>
+        </div>
+        <h4>Присоединяйтесь к нам в социальных сетях, чтобы первыми узнавать о скидках и акциях :)</h4>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/burg-toggle.js"></script>
+    <script src="js/content_loading.js"></script>
+
+</body>
+</html>
